@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Taller de Bicicletas Tony | Reparación y refacciones en Villas de San Martín</title>
+  <meta name="description" content="Taller de bicicletas en Villas de San Martín, Edo. Méx.: niveladas, engrasadas, talachas, pintadas al horno y refacciones. Escríbenos por WhatsApp.">
+  <meta name="theme-color" content="#0b0b0c">
+  <meta name="author" content="Taller de Bicicletas Tony">
+
+  <!-- Open Graph / redes -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:site_name" content="Taller de Bicicletas Tony">
+  <meta property="og:title" content="Taller de Bicicletas Tony | Que tu bici ruede como debe">
+  <meta property="og:description" content="Niveladas, engrasadas, talachas, pintadas al horno y venta de refacciones en Villas de San Martín, Estado de México.">
+  <meta property="og:image" content="assets/img/letrero-taller.jpg">
+  <meta property="og:image:alt" content="Letrero del Taller de Bicicletas Tony con sus servicios y horarios">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <!-- Tipografías: si no cargan, el sitio usa fuentes del sistema sin romperse -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Knewave&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Datos estructurados: solo información real del negocio -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BikeStore",
+    "name": "Taller de Bicicletas Tony",
+    "description": "Taller de bicicletas en Villas de San Martín, Estado de México. Reparación y venta de refacciones: niveladas, engrasadas en general, talachas y pintadas al horno.",
+    "image": "assets/img/letrero-taller.jpg",
+    "telephone": "+525614897472",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Villas de San Martín",
+      "addressRegion": "Estado de México",
+      "addressCountry": "MX"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 19.267058,
+      "longitude": -98.83513
+    },
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=19.267058,-98.835130",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "16:00",
+        "closes": "20:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "10:30",
+        "closes": "20:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "10:30",
+        "closes": "15:00"
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <!-- ================= SPRITE SVG (piezas reutilizables) ================= -->
+  <svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
+    <defs>
+      <!-- Plato de bicicleta: dientes con trazo punteado + brazos de la araña -->
+      <symbol id="i-plato" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="44" fill="none" stroke="currentColor" stroke-width="9" pathLength="360" stroke-dasharray="8.2 9.8" stroke-dashoffset="4.1"/>
+        <circle cx="50" cy="50" r="38" fill="none" stroke="currentColor" stroke-width="3.5"/>
+        <circle cx="50" cy="50" r="11" fill="none" stroke="currentColor" stroke-width="4"/>
+        <g stroke="currentColor" stroke-width="5" stroke-linecap="round">
+          <path d="M50 39V15"/>
+          <path d="M50 39V15" transform="rotate(72 50 50)"/>
+          <path d="M50 39V15" transform="rotate(144 50 50)"/>
+          <path d="M50 39V15" transform="rotate(216 50 50)"/>
+          <path d="M50 39V15" transform="rotate(288 50 50)"/>
+        </g>
+        <circle cx="50" cy="50" r="3.2" fill="currentColor"/>
+      </symbol>
+
+      <symbol id="i-wa" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+      </symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/>
+      </symbol>
+      <symbol id="i-flecha" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M4 12h15m-6-6 6 6-6 6"/>
+      </symbol>
+      <symbol id="i-bici" viewBox="0 0 48 32">
+        <g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="22" r="7"/>
+          <circle cx="39" cy="22" r="7"/>
+          <path d="M9 22 18 8h13l8 14M18 8l6 14h-15m15 0 7-14M28 6h5"/>
+        </g>
+      </symbol>
+      <symbol id="i-reloj" viewBox="0 0 24 24">
+        <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="9"/>
+          <path d="M12 7v5l3 2"/>
+        </g>
+      </symbol>
+
+      <!-- Rayos de rueda (12 líneas = 24 rayos), centrados en 0,0 -->
+      <g id="rayos" stroke="#cfd3da" stroke-width="1.1">
+        <line x1="-78" y1="0" x2="78" y2="0"/>
+        <line x1="-78" y1="0" x2="78" y2="0" transform="rotate(15)"/>
+        <line x1="-78" y1="0" x2="78" y2="0" transform="rotate(30)"/>
+        <line x1="-78" y1="0" x2="78" y2="0" transform="rotate(45)"/>
+        <line x1="-78" y1="0" x2="78" y2="0" transform="rotate(60)"/>
+        <line x1="-78" y1="0" x2="78" y2="0" transform="rotate(75)"/>
+        <line x1="-78" y1="0" x2="78" y2="0" transform="rotate(90)"/>
+        <line x1="-78" y1="0" x2="78" y2="0" transform="rotate(105)"/>
+        <line x1="-78" y1="0" x2="78" y2="0" transform="rotate(120)"/>
+        <line x1="-78" y1="0" x2="78" y2="0" transform="rotate(135)"/>
+        <line x1="-78" y1="0" x2="78" y2="0" transform="rotate(150)"/>
+        <line x1="-78" y1="0" x2="78" y2="0" transform="rotate(165)"/>
+      </g>
+
+      <!-- Rueda completa, centrada en 0,0 -->
+      <g id="rueda">
+        <circle r="90" fill="none" stroke="#2a2a31" stroke-width="12"/>
+        <circle r="96" fill="none" stroke="#4a4a54" stroke-width="1.4" stroke-dasharray="4 7"/>
+        <circle r="82" fill="none" stroke="#c9ced6" stroke-width="3"/>
+        <circle r="78" fill="none" stroke="#ffe21a" stroke-width="1" opacity=".55"/>
+        <use href="#rayos"/>
+        <circle r="10" fill="#d9dde3"/>
+        <circle r="4" fill="#0b0b0c"/>
+      </g>
+
+      <!-- Cuadro de bicicleta (toma su color de currentColor) -->
+      <g id="bici-chasis">
+        <g fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M322 276 296 152"/>
+          <path d="M296 152 460 148"/>
+          <path d="M322 276 464 172"/>
+          <path d="M460 143 468 177" stroke-width="11"/>
+          <path d="M299 160 190 256"/>
+          <path d="M322 276 190 256"/>
+          <path d="M468 177 500 256"/>
+        </g>
+        <g fill="none" stroke="#d9dde3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M296 152 290 124"/>
+          <path d="M460 143 456 119"/>
+          <path d="M432 128Q454 106 486 115"/>
+        </g>
+        <path d="M258 124Q290 114 326 122L322 132Q290 130 262 134Z" fill="#e5342d"/>
+        <path d="M482 113 494 116" stroke="#e5342d" stroke-width="9" stroke-linecap="round"/>
+      </g>
+
+      <!-- Siluetas de barrio (capas de paralaje) -->
+      <g id="cielo-lejos" fill="#1b1418">
+        <rect x="0" y="262" width="58" height="90"/>
+        <rect x="58" y="222" width="42" height="130"/>
+        <rect x="100" y="282" width="70" height="70"/>
+        <rect x="170" y="242" width="50" height="110"/>
+        <rect x="220" y="292" width="80" height="60"/>
+        <rect x="300" y="212" width="46" height="140"/>
+        <rect x="346" y="257" width="64" height="95"/>
+        <rect x="410" y="232" width="56" height="120"/>
+        <rect x="466" y="282" width="88" height="70"/>
+        <rect x="554" y="247" width="42" height="105"/>
+        <rect x="596" y="267" width="70" height="85"/>
+        <rect x="666" y="237" width="94" height="115"/>
+        <rect x="66" y="208" width="18" height="15" rx="6"/>
+        <rect x="312" y="198" width="20" height="15" rx="6"/>
+        <rect x="566" y="233" width="16" height="15" rx="6"/>
+        <rect x="690" y="223" width="20" height="15" rx="6"/>
+        <path d="M130 282V258M440 232V204M630 267V244" stroke="#1b1418" stroke-width="2"/>
+        <g fill="#ffe21a" opacity=".5">
+          <rect class="ventana" x="68" y="236" width="5" height="7"/>
+          <rect class="ventana v2" x="180" y="262" width="5" height="7"/>
+          <rect class="ventana v3" x="310" y="232" width="5" height="7"/>
+          <rect class="ventana" x="422" y="252" width="5" height="7"/>
+          <rect class="ventana v2" x="676" y="258" width="5" height="7"/>
+          <rect class="ventana v3" x="604" y="288" width="5" height="7"/>
+        </g>
+      </g>
+
+      <g id="cielo-cerca" fill="#101013" stroke="#25252b" stroke-width="1">
+        <rect x="0" y="292" width="104" height="60"/>
+        <rect x="104" y="262" width="86" height="90"/>
+        <rect x="190" y="302" width="120" height="50"/>
+        <rect x="310" y="272" width="96" height="80"/>
+        <rect x="406" y="298" width="130" height="54"/>
+        <rect x="536" y="258" width="92" height="94"/>
+        <rect x="628" y="290" width="132" height="62"/>
+        <rect x="120" y="243" width="28" height="19" rx="9"/>
+        <rect x="326" y="254" width="26" height="18" rx="9"/>
+        <rect x="552" y="240" width="28" height="19" rx="9"/>
+        <path d="M250 352V236M236 248H264" stroke="#2c2c33" stroke-width="3" fill="none"/>
+        <path d="M250 242Q330 268 410 242" stroke="#2c2c33" stroke-width="1.2" fill="none"/>
+        <path d="M410 352V240M396 252H424" stroke="#2c2c33" stroke-width="3" fill="none"/>
+        <g fill="#ffe21a" stroke="none" opacity=".75">
+          <rect class="ventana" x="124" y="278" width="7" height="9"/>
+          <rect class="ventana v2" x="160" y="296" width="7" height="9"/>
+          <rect class="ventana v3" x="330" y="290" width="7" height="9"/>
+          <rect class="ventana" x="568" y="278" width="7" height="9"/>
+          <rect class="ventana v2" x="600" y="312" width="7" height="9"/>
+          <rect class="ventana v3" x="660" y="312" width="7" height="9"/>
+        </g>
+      </g>
+    </defs>
+  </svg>
+
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <!-- ================= CARGADOR ================= -->
+  <div class="cargador" id="cargador" role="status" aria-live="polite" aria-label="Cargando el sitio del Taller de Bicicletas Tony">
+    <div class="cargador__panel cargador__panel--izq"></div>
+    <div class="cargador__panel cargador__panel--der"></div>
+    <div class="cargador__centro">
+      <div class="cargador__rueda" aria-hidden="true">
+        <svg viewBox="0 0 160 160">
+          <circle class="cargador__orbita" cx="80" cy="80" r="74"/>
+          <circle class="cargador__avance" cx="80" cy="80" r="74" pathLength="100"/>
+          <g class="cargador__plato"><use href="#i-plato" x="30" y="30" width="100" height="100"/></g>
+          <circle cx="80" cy="6" r="4" class="cargador__punto"/>
+        </svg>
+      </div>
+      <p class="cargador__marca">Taller de Bicicletas <em>Tony</em></p>
+      <p class="cargador__estado" aria-hidden="true"><span class="cargador__texto">Afinando tu experiencia</span> <b id="cargadorPct">0</b>%</p>
+      <div class="cargador__cadena" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <div class="progreso" aria-hidden="true"><i id="progresoBarra"></i></div>
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+
+  <!-- ================= ENCABEZADO ================= -->
+  <header class="encabezado" id="encabezado">
+    <div class="encabezado__fila">
+      <a class="marca" href="#inicio" aria-label="Taller de Bicicletas Tony, ir al inicio">
+        <svg class="marca__plato" viewBox="0 0 100 100" aria-hidden="true"><use href="#i-plato"/></svg>
+        <span class="marca__texto">
+          <span class="marca__taller">Taller de</span>
+          <span class="marca__bici">Bicicletas</span>
+          <span class="marca__tony">Tony</span>
+        </span>
+      </a>
+
+      <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menu">
+        <span class="menu-btn__texto">Menú</span>
+        <span class="menu-btn__lineas" aria-hidden="true"><i></i><i></i></span>
+      </button>
+
+      <nav class="menu" id="menu" aria-label="Principal">
+        <ul class="menu__lista">
+          <li><a href="#servicios" data-seccion="servicios"><span class="menu__num">01</span>Servicios</a></li>
+          <li><a href="#refacciones" data-seccion="refacciones"><span class="menu__num">02</span>Refacciones</a></li>
+          <li><a href="#ruta" data-seccion="ruta"><span class="menu__num">03</span>Cómo funciona</a></li>
+          <li><a href="#horarios" data-seccion="horarios"><span class="menu__num">04</span>Horarios y mapa</a></li>
+          <li><a href="#preguntas" data-seccion="preguntas"><span class="menu__num">05</span>Preguntas</a></li>
+        </ul>
+        <a class="btn btn--amarillo btn--chico menu__cta" href="#contacto" data-wa="Hola, quiero agendar mi visita al taller. ¿Me ayudan?">
+          <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>
+          <span>Agenda tu visita</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="inicio" aria-labelledby="titulo-hero">
+      <div class="hero__fondo" aria-hidden="true">
+        <div class="hero__rejilla"></div>
+        <div class="hero__brillo hero__brillo--rojo"></div>
+        <div class="hero__brillo hero__brillo--amarillo"></div>
+        <svg class="hero__plato hero__plato--a" viewBox="0 0 100 100"><use href="#i-plato"/></svg>
+        <svg class="hero__plato hero__plato--b" viewBox="0 0 100 100"><use href="#i-plato"/></svg>
+        <canvas class="hero__chispas" id="chispas"></canvas>
+      </div>
+
+      <div class="hero__contenido">
+        <p class="chip-estado" data-estado-chip>
+          <span class="chip-estado__punto" aria-hidden="true"></span>
+          <span data-estado-texto>Reparación y refacciones en Villas de San Martín</span>
+        </p>
+
+        <h1 class="hero__titulo" id="titulo-hero">
+          <span class="hero__kicker">Taller de Bicicletas Tony</span>
+          <span class="linea"><span>Que tu bici</span></span>
+          <span class="linea"><span>ruede <em class="resalte">como debe.</em></span></span>
+        </h1>
+
+        <p class="hero__lead">
+          Niveladas, engrasadas, talachas y pintadas al horno, más refacciones a la mano.
+          Llégale con tu bici y sal rodando.
+        </p>
+
+        <div class="hero__acciones">
+          <a class="btn btn--amarillo btn--grande" href="#contacto" data-wa="Hola, quiero que revisen mi bici y la dejen lista para rodar. ¿Cuándo puedo pasar?" data-magnetico>
+            <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>
+            <span>Quiero mi bici lista</span>
+          </a>
+          <a class="btn btn--fantasma btn--grande" href="#servicios">
+            <span>Ver qué hacemos</span>
+            <svg class="ico" aria-hidden="true"><use href="#i-flecha"/></svg>
+          </a>
+        </div>
+
+        <ul class="hero__datos" aria-label="Servicios principales">
+          <li><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>Villas de San Martín, Edo. Méx.</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-reloj"/></svg>Lunes a domingo</li>
+        </ul>
+      </div>
+
+      <!-- Escena: la bici avanza sin parar con el barrio detrás -->
+      <div class="hero__escena" data-tilt-escena>
+        <svg class="escena" viewBox="60 10 560 390" role="img" aria-label="Ilustración de una bicicleta amarilla avanzando por la calle de un barrio, con el plato girando y la cadena en movimiento">
+          <defs>
+            <radialGradient id="g-luz" cx="50%" cy="50%" r="50%">
+              <stop offset="0" stop-color="#ffe21a" stop-opacity=".28"/>
+              <stop offset="1" stop-color="#ffe21a" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="g-calle" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#17171b"/>
+              <stop offset="1" stop-color="#0b0b0c"/>
+            </linearGradient>
+            <linearGradient id="g-vel" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#ffe21a" stop-opacity="0"/>
+              <stop offset="1" stop-color="#ffe21a" stop-opacity=".7"/>
+            </linearGradient>
+          </defs>
+
+          <ellipse cx="340" cy="250" rx="300" ry="170" fill="url(#g-luz)"/>
+          <g class="escena__sol"><use href="#i-plato" x="300" y="-50" width="440" height="440"/></g>
+
+          <g class="capa capa--lejos" data-ride>
+            <use href="#cielo-lejos"/>
+            <use href="#cielo-lejos" x="760"/>
+          </g>
+          <g class="capa capa--cerca" data-ride>
+            <use href="#cielo-cerca"/>
+            <use href="#cielo-cerca" x="760"/>
+          </g>
+
+          <rect x="0" y="352" width="1600" height="60" fill="url(#g-calle)"/>
+          <path d="M0 352H1600" stroke="#34343b" stroke-width="2"/>
+          <g class="capa capa--calle" data-ride>
+            <path d="M0 382H1700" stroke="#ffe21a" stroke-width="4" stroke-dasharray="70 90" stroke-linecap="round" opacity=".85"/>
+          </g>
+
+          <ellipse cx="345" cy="356" rx="215" ry="7" fill="#000" opacity=".55"/>
+
+          <g class="bici">
+            <g class="bici__rebote">
+              <g class="vel" data-ride>
+                <path d="M70 188H190" stroke="url(#g-vel)" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M40 226H150" stroke="url(#g-vel)" stroke-width="2" stroke-linecap="round"/>
+                <path d="M90 300H175" stroke="url(#g-vel)" stroke-width="2" stroke-linecap="round"/>
+              </g>
+
+              <g class="rueda-giro rueda-giro--t" data-ride><use href="#rueda" x="190" y="256"/></g>
+              <g class="rueda-giro rueda-giro--d" data-ride><use href="#rueda" x="500" y="256"/></g>
+
+              <g class="bici__cadena" data-ride>
+                <path d="M190 243H322A33 33 0 0 1 322 309L190 269A13 13 0 0 1 190 243Z" fill="none" stroke="#7b7f88" stroke-width="3.2" stroke-dasharray="9 7"/>
+              </g>
+
+              <g class="cog" data-ride><use href="#i-plato" x="176" y="242" width="28" height="28" style="color:#c9ced6"/></g>
+
+              <use class="bici__cuadro" href="#bici-chasis" style="color:#ffe21a"/>
+
+              <g class="biela" data-ride>
+                <use href="#i-plato" x="287" y="241" width="70" height="70" style="color:#d9dde3"/>
+                <path d="M322 276 366 276" stroke="#aab0b9" stroke-width="7" stroke-linecap="round"/>
+                <path d="M322 276 278 276" stroke="#aab0b9" stroke-width="7" stroke-linecap="round"/>
+                <g class="pedal" data-ride><rect x="358" y="272" width="22" height="8" rx="2" fill="#e5342d"/></g>
+                <g class="pedal pedal--b" data-ride><rect x="264" y="272" width="22" height="8" rx="2" fill="#e5342d"/></g>
+              </g>
+              <circle cx="322" cy="276" r="5" fill="#0b0b0c" stroke="#ffe21a" stroke-width="2"/>
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <a class="hero__bajar" href="#manifiesto" aria-label="Bajar a la siguiente sección">
+        <span class="hero__bajar-linea" aria-hidden="true"></span>
+        <span>Desliza</span>
+      </a>
+    </section>
+
+    <!-- ================= CINTA ================= -->
+    <div class="cinta" aria-hidden="true">
+      <div class="cinta__banda">
+        <div class="cinta__pista">
+          <span>Niveladas</span><i></i><span>Engrasadas en general</span><i></i><span>Talachas</span><i></i><span>Pintadas al horno</span><i></i><span>Venta de refacciones</span><i></i>
+          <span>Niveladas</span><i></i><span>Engrasadas en general</span><i></i><span>Talachas</span><i></i><span>Pintadas al horno</span><i></i><span>Venta de refacciones</span><i></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= MANIFIESTO ================= -->
+    <section class="manifiesto" id="manifiesto" aria-labelledby="titulo-manifiesto">
+      <svg class="manifiesto__plato" viewBox="0 0 100 100" aria-hidden="true"><use href="#i-plato"/></svg>
+      <div class="contenedor manifiesto__grid">
+        <p class="etiqueta etiqueta--oscura" data-reveal><span class="etiqueta__n">00</span> Por qué existimos</p>
+        <h2 class="manifiesto__texto" id="titulo-manifiesto" data-palabras>
+          Una bici floja se siente en cada pedaleada. Un <mark class="m-rojo">rin chueco</mark>, una <mark class="m-rojo">cadena seca</mark>, una <mark class="m-rojo">pintura cansada</mark>: en Taller de Bicicletas Tony lo arreglamos con oficio, herramienta y refacciones a la mano, para que lo único que te preocupe sea a dónde vas.
+        </h2>
+        <p class="manifiesto__firma" data-reveal>— El taller de Villas de San Martín</p>
+      </div>
+    </section>
+
+    <!-- ================= SERVICIOS ================= -->
+    <section class="servicios" id="servicios" aria-labelledby="titulo-servicios">
+      <div class="contenedor">
+        <header class="seccion-cab">
+          <p class="etiqueta" data-reveal><span class="etiqueta__n">01</span> Lo que hacemos</p>
+          <h2 class="titulo-seccion" id="titulo-servicios" data-reveal>Cuatro servicios. <span class="t-amarillo">Una sola meta:</span> que ruedes.</h2>
+          <p class="seccion-cab__texto" data-reveal>Reparación y venta de refacciones con el oficio de siempre. Elige lo que necesita tu bici y mira cómo lo resolvemos.</p>
+        </header>
+
+        <ol class="pila">
+          <!-- 01 NIVELADAS -->
+          <li class="tarjeta tarjeta--amarilla" data-tarjeta style="--i:0">
+            <article class="tarjeta__in" aria-labelledby="s1">
+              <div class="tarjeta__info">
+                <p class="tarjeta__num">01 <span>/ 04</span></p>
+                <h3 class="tarjeta__titulo" id="s1">Niveladas</h3>
+                <p class="tarjeta__texto">Un rin con vaivén roza los frenos y se siente en cada vuelta. Lo nivelamos para que la rueda gire derecha y tu bici vuelva a sentirse firme.</p>
+                <ul class="tarjeta__tags"><li>Rines</li><li>Rayos</li><li>Rueda derecha</li></ul>
+                <a class="btn btn--tinta" href="#contacto" data-wa="Hola, quiero una nivelada de rin para mi bici. ¿Cuándo puedo pasar?">
+                  <span>Quiero mi rin derecho</span>
+                  <svg class="ico" aria-hidden="true"><use href="#i-flecha"/></svg>
+                </a>
+              </div>
+              <div class="tarjeta__visual" data-viz="rin">
+                <svg class="viz viz--rin" viewBox="0 0 300 300" role="img" aria-label="Rueda de bicicleta que gira chueca y se va enderezando mientras avanzas por la página">
+                  <circle class="rin-guia" cx="150" cy="150" r="118"/>
+                  <g class="rin-fallback"><circle cx="150" cy="150" r="118" fill="none" stroke="#14110a" stroke-width="7"/><g transform="translate(150 150) scale(1.45)" style="color:#14110a"><use href="#rayos"/></g></g>
+                  <g class="rin-rayos" data-rin-rayos></g>
+                  <path class="rin-aro" data-rin-aro d=""/>
+                  <circle class="rin-buje" cx="150" cy="150" r="13"/>
+                  <circle cx="150" cy="150" r="5" fill="#ffe21a"/>
+                  <g class="rin-calibre">
+                    <path d="M150 6v20" stroke="#14110a" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M141 6h18" stroke="#14110a" stroke-width="3" stroke-linecap="round"/>
+                  </g>
+                </svg>
+                <p class="viz__estado"><span class="viz__punto" aria-hidden="true"></span><span data-rin-texto>Rueda chueca</span></p>
+              </div>
+            </article>
+          </li>
+
+          <!-- 02 ENGRASADAS -->
+          <li class="tarjeta tarjeta--roja" data-tarjeta style="--i:1">
+            <article class="tarjeta__in" aria-labelledby="s2">
+              <div class="tarjeta__info">
+                <p class="tarjeta__num">02 <span>/ 04</span></p>
+                <h3 class="tarjeta__titulo" id="s2">Engrasadas en general</h3>
+                <p class="tarjeta__texto">Una cadena seca rechina, jala duro y se gasta antes. Engrasamos lo que tu bici necesita para que ruede suave y en silencio.</p>
+                <ul class="tarjeta__tags"><li>Cadena</li><li>Piezas que giran</li><li>Pedaleo suave</li></ul>
+                <a class="btn btn--blanco" href="#contacto" data-wa="Hola, quiero una engrasada general para mi bici. ¿Cuándo puedo pasar?">
+                  <span>Quiero que ruede suave</span>
+                  <svg class="ico" aria-hidden="true"><use href="#i-flecha"/></svg>
+                </a>
+              </div>
+              <div class="tarjeta__visual" data-viz="grasa">
+                <svg class="viz viz--grasa" viewBox="0 0 300 300" role="img" aria-label="Cadena de bicicleta que se engrasa: una gota cae sobre los eslabones y la cadena pasa de opaca a brillante">
+                  <g class="grasa-ruedas">
+                    <g class="grasa-giro"><use href="#i-plato" x="20" y="100" width="100" height="100" style="color:#fff"/></g>
+                    <g class="grasa-giro grasa-giro--b"><use href="#i-plato" x="180" y="100" width="100" height="100" style="color:#fff"/></g>
+                  </g>
+                  <path class="cad cad--seca" d="M70 98H230A52 52 0 0 1 230 202H70A52 52 0 0 1 70 98Z"/>
+                  <path class="cad cad--brillo" d="M70 98H230A52 52 0 0 1 230 202H70A52 52 0 0 1 70 98Z" data-grasa-brillo/>
+                  <path class="gota" d="M150 22c-9 15-12 22-12 29a12 12 0 0 0 24 0c0-7-3-14-12-29Z"/>
+                  <circle class="onda" cx="150" cy="98" r="6"/>
+                  <g class="chispa-g" data-grasa-chispas>
+                    <path class="chispa" d="M96 80l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/>
+                    <path class="chispa chispa--b" d="M205 214l2 6 6 2-6 2-2 6-2-6-6-2 6-2z"/>
+                    <path class="chispa chispa--c" d="M236 78l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/>
+                  </g>
+                </svg>
+                <p class="viz__estado"><span class="viz__punto" aria-hidden="true"></span><span data-grasa-texto>Cadena seca</span></p>
+              </div>
+            </article>
+          </li>
+
+          <!-- 03 TALACHAS -->
+          <li class="tarjeta tarjeta--clara" data-tarjeta style="--i:2">
+            <article class="tarjeta__in" aria-labelledby="s3">
+              <div class="tarjeta__info">
+                <p class="tarjeta__num">03 <span>/ 04</span></p>
+                <h3 class="tarjeta__titulo" id="s3">Talachas</h3>
+                <p class="tarjeta__texto">Ese ajuste o esa reparación del día a día que no puede esperar. Pásate al taller, cuéntanos qué le pasa a tu bici y la dejamos lista.</p>
+                <ul class="tarjeta__tags"><li>Ajustes</li><li>Reparaciones</li><li>Revisión</li></ul>
+                <a class="btn btn--tinta" href="#contacto" data-wa="Hola, mi bici necesita una talacha. ¿Me pueden atender?">
+                  <span>Tengo una talacha para ustedes</span>
+                  <svg class="ico" aria-hidden="true"><use href="#i-flecha"/></svg>
+                </a>
+              </div>
+              <div class="tarjeta__visual" data-viz="engranes">
+                <svg class="viz viz--engranes" viewBox="0 0 320 300" role="img" aria-label="Dos engranes que giran acoplados y una llave que se mueve, símbolo de las reparaciones del taller">
+                  <g class="eng eng--a">
+                    <circle cx="112" cy="168" r="62" pathLength="360" fill="none" stroke="#14110a" stroke-width="13" stroke-dasharray="13.5 16.5" stroke-dashoffset="6.75"/>
+                    <circle cx="112" cy="168" r="57" fill="#14110a"/>
+                    <circle cx="112" cy="168" r="44" fill="none" stroke="#ffe21a" stroke-width="3"/>
+                    <circle cx="112" cy="168" r="12" fill="#ffe21a"/>
+                    <g fill="#ffe21a"><circle cx="112" cy="136" r="6"/><circle cx="144" cy="168" r="6"/><circle cx="112" cy="200" r="6"/><circle cx="80" cy="168" r="6"/></g>
+                  </g>
+                  <g class="eng eng--b">
+                    <circle cx="215.3" cy="168" r="41.3" pathLength="360" fill="none" stroke="#e5342d" stroke-width="13" stroke-dasharray="20.25 24.75" stroke-dashoffset="32.6"/>
+                    <circle cx="215.3" cy="168" r="36.5" fill="#e5342d"/>
+                    <circle cx="215.3" cy="168" r="26" fill="none" stroke="#14110a" stroke-width="3"/>
+                    <circle cx="215.3" cy="168" r="9" fill="#14110a"/>
+                    <g fill="#14110a"><circle cx="215.3" cy="148" r="4"/><circle cx="235.3" cy="168" r="4"/><circle cx="215.3" cy="188" r="4"/><circle cx="195.3" cy="168" r="4"/></g>
+                  </g>
+                  <g class="llave">
+                    <rect x="-7" y="8" width="14" height="100" rx="7" fill="#6d727b"/>
+                    <circle r="21" fill="#6d727b"/>
+                    <rect x="-8" y="-32" width="16" height="28" fill="var(--card-bg, #f3efe6)"/>
+                  </g>
+                </svg>
+                <p class="viz__estado"><span class="viz__punto" aria-hidden="true"></span><span>Todo acoplado y girando</span></p>
+              </div>
+            </article>
+          </li>
+
+          <!-- 04 PINTADAS AL HORNO -->
+          <li class="tarjeta tarjeta--negra" data-tarjeta style="--i:3">
+            <article class="tarjeta__in" aria-labelledby="s4">
+              <div class="tarjeta__info">
+                <p class="tarjeta__num">04 <span>/ 04</span></p>
+                <h3 class="tarjeta__titulo" id="s4">Pintadas al horno</h3>
+                <p class="tarjeta__texto">Un acabado parejo y resistente que renueva tu bici por completo. Elige un color en el simulador y mira cómo luciría.</p>
+                <p class="pintura__color" aria-live="polite">Color elegido: <strong data-color-nombre>Amarillo</strong></p>
+                <div class="muestras" role="group" aria-label="Colores de referencia para la pintura">
+                  <button class="muestra is-activa" type="button" style="--c:#ffe21a" data-color="#ffe21a" data-nombre="Amarillo" aria-pressed="true" aria-label="Amarillo"></button>
+                  <button class="muestra" type="button" style="--c:#e5342d" data-color="#e5342d" data-nombre="Rojo" aria-pressed="false" aria-label="Rojo"></button>
+                  <button class="muestra" type="button" style="--c:#1f6fe0" data-color="#1f6fe0" data-nombre="Azul" aria-pressed="false" aria-label="Azul"></button>
+                  <button class="muestra" type="button" style="--c:#ff7a1a" data-color="#ff7a1a" data-nombre="Naranja" aria-pressed="false" aria-label="Naranja"></button>
+                  <button class="muestra" type="button" style="--c:#27c46b" data-color="#27c46b" data-nombre="Verde" aria-pressed="false" aria-label="Verde"></button>
+                  <button class="muestra" type="button" style="--c:#8a5cff" data-color="#8a5cff" data-nombre="Morado" aria-pressed="false" aria-label="Morado"></button>
+                  <button class="muestra" type="button" style="--c:#ff6fb5" data-color="#ff6fb5" data-nombre="Rosa" aria-pressed="false" aria-label="Rosa"></button>
+                  <button class="muestra" type="button" style="--c:#f2f2f2" data-color="#f2f2f2" data-nombre="Blanco" aria-pressed="false" aria-label="Blanco"></button>
+                  <button class="muestra" type="button" style="--c:#2b2b30" data-color="#2b2b30" data-nombre="Negro" aria-pressed="false" aria-label="Negro"></button>
+                </div>
+                <a class="btn btn--amarillo" href="#contacto" data-wa="Hola, quiero una pintada al horno para mi bici en color Amarillo. ¿Tienen ese color disponible?" data-pintura-cta>
+                  <span>Quiero mi bici en este color</span>
+                  <svg class="ico" aria-hidden="true"><use href="#i-flecha"/></svg>
+                </a>
+                <p class="tarjeta__nota">Simulador de referencia visual: confirmamos por WhatsApp los colores disponibles.</p>
+              </div>
+              <div class="tarjeta__visual pintura" data-viz="pintura" style="--pintura:#ffe21a">
+                <div class="horno" aria-hidden="true"><i></i><i></i><i></i></div>
+                <svg class="viz viz--bici" viewBox="60 90 560 290" role="img" aria-label="Bicicleta cuyo cuadro cambia al color que elijas en el simulador">
+                  <use href="#rueda" x="190" y="256"/>
+                  <use href="#rueda" x="500" y="256"/>
+                  <use class="bici__cuadro" href="#bici-chasis" style="color:var(--pintura)"/>
+                  <use href="#i-plato" x="287" y="241" width="70" height="70" style="color:#d9dde3"/>
+                  <circle cx="322" cy="276" r="5" fill="#0b0b0c" stroke="#ffe21a" stroke-width="2"/>
+                </svg>
+                <p class="viz__estado"><span class="viz__punto" aria-hidden="true"></span><span data-horno-texto>Listo para hornear</span></p>
+              </div>
+            </article>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================= ADENTRO DEL TALLER (imagen que se expande) ================= -->
+    <section class="adentro" id="adentro" aria-labelledby="titulo-adentro" data-expandir>
+      <div class="adentro__pin">
+        <figure class="adentro__marco">
+          <img src="assets/img/bicis-azules.jpg" width="1600" height="1200" alt="Dos bicicletas azules estilo cruiser dentro del taller, con refacciones colgadas en la pared del fondo" loading="lazy" decoding="async">
+          <span class="adentro__velo" aria-hidden="true"></span>
+        </figure>
+        <span class="adentro__pista" aria-hidden="true">Sigue bajando · entra al taller</span>
+        <div class="adentro__texto">
+          <p class="etiqueta etiqueta--clara"><span class="etiqueta__n">—</span> Adentro del taller</p>
+          <h2 class="adentro__titulo" id="titulo-adentro">Pasa. Aquí se <span class="t-amarillo">afina.</span></h2>
+          <p class="adentro__sub">Herramienta, refacciones colgadas a la vista y bicis que esperan su turno. Así se ve el trabajo de todos los días.</p>
+          <a class="btn btn--amarillo" href="#contacto" data-wa="Hola, voy a llevar mi bici al taller. ¿Me confirman si puedo pasar hoy?">
+            <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>
+            <span>Estoy listo, voy para allá</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= REFACCIONES ================= -->
+    <section class="refacciones" id="refacciones" aria-labelledby="titulo-refacciones">
+      <div class="contenedor">
+        <header class="seccion-cab seccion-cab--clara">
+          <p class="etiqueta etiqueta--oscura" data-reveal><span class="etiqueta__n">02</span> Venta de refacciones</p>
+          <h2 class="titulo-seccion titulo-seccion--oscuro" id="titulo-refacciones" data-reveal>Refacciones para que tu bici <span class="t-rojo">no se quede parada.</span></h2>
+          <p class="seccion-cab__texto seccion-cab__texto--oscuro" data-reveal>Llantas, rines, puños, pedales, frenos y mucho más colgados a la vista. Toca los puntos de la foto para ver qué hay en la pared.</p>
+        </header>
+
+        <div class="refa__grid">
+          <figure class="pared" data-pared data-reveal>
+            <div class="pared__lienzo">
+              <img src="assets/img/pared-refacciones.jpg" width="1600" height="1200" alt="Pared del taller con llantas, rines, puños de colores, pedales, palancas y discos de freno y manubrios colgados a la venta" loading="lazy" decoding="async">
+              <button class="punto" type="button" style="--x:22%;--y:27%" data-punto="Llantas y rines" aria-label="Llantas y rines"><span></span></button>
+              <button class="punto" type="button" style="--x:62%;--y:30%" data-punto="Puños de colores" aria-label="Puños de colores"><span></span></button>
+              <button class="punto" type="button" style="--x:76%;--y:54%" data-punto="Pedales" aria-label="Pedales"><span></span></button>
+              <button class="punto" type="button" style="--x:47%;--y:66%" data-punto="Palancas de freno" aria-label="Palancas de freno"><span></span></button>
+              <button class="punto" type="button" style="--x:79%;--y:72%" data-punto="Discos de freno" aria-label="Discos de freno"><span></span></button>
+              <button class="punto" type="button" style="--x:46%;--y:85%" data-punto="Manubrios" aria-label="Manubrios"><span></span></button>
+            </div>
+            <figcaption class="pared__leyenda" aria-live="polite"><span class="pared__punto" aria-hidden="true"></span><span data-leyenda>Toca un punto de la foto</span></figcaption>
+          </figure>
+
+          <div class="refa__lado" data-reveal style="--d:.12s">
+            <figure class="cajoneras" data-tilt>
+              <img src="assets/img/cajoneras-refacciones.jpg" width="1200" height="1600" alt="Estantería con cajoneras azules y negras llenas de tornillería y refacciones, con pedales de colores en los entrepaños de arriba" loading="lazy" decoding="async">
+              <figcaption>Tornillería y piezas chicas, ordenadas por cajón</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="buscador" data-buscador data-reveal>
+          <div class="buscador__cab">
+            <h3 class="buscador__titulo">¿Qué pieza necesitas?</h3>
+            <p class="buscador__texto">Marca lo que buscas y te armamos el mensaje para preguntar si lo tenemos.</p>
+          </div>
+          <ul class="buscador__lista" role="list">
+            <li><button class="pieza" type="button" aria-pressed="false" data-pieza="llantas">Llantas</button></li>
+            <li><button class="pieza" type="button" aria-pressed="false" data-pieza="rines">Rines</button></li>
+            <li><button class="pieza" type="button" aria-pressed="false" data-pieza="puños">Puños</button></li>
+            <li><button class="pieza" type="button" aria-pressed="false" data-pieza="pedales">Pedales</button></li>
+            <li><button class="pieza" type="button" aria-pressed="false" data-pieza="frenos">Frenos</button></li>
+            <li><button class="pieza" type="button" aria-pressed="false" data-pieza="manubrios">Manubrios</button></li>
+            <li><button class="pieza" type="button" aria-pressed="false" data-pieza="asientos">Asientos</button></li>
+            <li><button class="pieza" type="button" aria-pressed="false" data-pieza="luces">Luces</button></li>
+            <li><button class="pieza" type="button" aria-pressed="false" data-pieza="timbres">Timbres</button></li>
+            <li><button class="pieza" type="button" aria-pressed="false" data-pieza="cables">Cables</button></li>
+            <li><button class="pieza" type="button" aria-pressed="false" data-pieza="tornillería">Tornillería</button></li>
+          </ul>
+          <a class="btn btn--amarillo btn--grande" href="#contacto" data-wa="Hola, busco una refacción para mi bici. ¿La tienen disponible?" data-piezas-cta>
+            <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>
+            <span data-piezas-texto>Pregunta por tu refacción</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= RUTA (cómo funciona) ================= -->
+    <section class="ruta" id="ruta" aria-labelledby="titulo-ruta">
+      <div class="contenedor">
+        <header class="seccion-cab seccion-cab--clara">
+          <p class="etiqueta etiqueta--oscura" data-reveal><span class="etiqueta__n">03</span> Cómo funciona</p>
+          <h2 class="titulo-seccion titulo-seccion--oscuro" id="titulo-ruta" data-reveal>Tres paradas y <span class="t-subrayado">sales rodando.</span></h2>
+        </header>
+
+        <div class="ruta__riel" data-ruta>
+        <span class="ruta__marcador" aria-hidden="true"><svg viewBox="0 0 48 32"><use href="#i-bici"/></svg></span>
+        <ol class="ruta__lista">
+          <li class="paso" data-paso>
+            <span class="paso__num" aria-hidden="true">01</span>
+            <div class="paso__card">
+              <svg class="paso__ico" aria-hidden="true"><use href="#i-wa"/></svg>
+              <h3>Escríbenos</h3>
+              <p>Cuéntanos qué le pasa a tu bici o qué pieza buscas. Si puedes, mándanos una foto.</p>
+              <a class="btn btn--tinta btn--chico" href="#contacto" data-wa="Hola, quiero preguntar por una reparación para mi bici. Les mando foto.">
+                <span>Estoy listo, escríbeles</span>
+                <svg class="ico" aria-hidden="true"><use href="#i-flecha"/></svg>
+              </a>
+            </div>
+          </li>
+          <li class="paso" data-paso>
+            <span class="paso__num" aria-hidden="true">02</span>
+            <div class="paso__card">
+              <svg class="paso__ico" aria-hidden="true"><use href="#i-pin"/></svg>
+              <h3>Pásate al taller</h3>
+              <p>Estamos en Villas de San Martín, Estado de México. Lunes a viernes de 4:00 PM a 8:30 PM; sábados y domingos desde las 10:30 AM.</p>
+              <a class="btn btn--tinta btn--chico" href="https://www.google.com/maps/search/?api=1&amp;query=19.267058,-98.835130" target="_blank" rel="noopener">
+                <span>Ver cómo llegar</span>
+                <svg class="ico" aria-hidden="true"><use href="#i-flecha"/></svg>
+              </a>
+            </div>
+          </li>
+          <li class="paso" data-paso>
+            <span class="paso__num" aria-hidden="true">03</span>
+            <div class="paso__card">
+              <svg class="paso__ico paso__ico--bici" viewBox="0 0 48 32" aria-hidden="true"><use href="#i-bici"/></svg>
+              <h3>Sal rodando</h3>
+              <p>Revisamos, ajustamos y listo: tu bici de vuelta en la calle, firme y lista para el siguiente tramo.</p>
+            </div>
+          </li>
+        </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HORARIOS Y MAPA ================= -->
+    <section class="horarios" id="horarios" aria-labelledby="titulo-horarios">
+      <div class="contenedor">
+        <header class="seccion-cab">
+          <p class="etiqueta" data-reveal><span class="etiqueta__n">04</span> Horarios y ubicación</p>
+          <h2 class="titulo-seccion" id="titulo-horarios" data-reveal>Estamos cerca. <span class="t-amarillo">Y abrimos</span> cuando sales.</h2>
+        </header>
+
+        <div class="hor__grid">
+          <div class="hor__col">
+            <div class="estado-card" data-reveal>
+              <p class="estado-card__estado" data-estado-grande><span class="estado-card__punto" aria-hidden="true"></span><span data-estado-titulo>Consulta nuestros horarios</span></p>
+              <p class="estado-card__detalle" data-estado-detalle>Atendemos de lunes a domingo.</p>
+
+              <ul class="horario" data-horario>
+                <li class="horario__fila" data-dias="1,2,3,4,5" data-abre="16:00" data-cierra="20:30">
+                  <span class="horario__dia">Lunes a viernes</span>
+                  <span class="horario__hora">4:00 PM – 8:30 PM</span>
+                  <span class="horario__barra" aria-hidden="true"><i style="--ini:58.33%;--ancho:37.5%"></i><b class="horario__ahora"></b></span>
+                </li>
+                <li class="horario__fila" data-dias="6" data-abre="10:30" data-cierra="20:30">
+                  <span class="horario__dia">Sábados</span>
+                  <span class="horario__hora">10:30 AM – 8:30 PM</span>
+                  <span class="horario__barra" aria-hidden="true"><i style="--ini:12.5%;--ancho:83.33%"></i><b class="horario__ahora"></b></span>
+                </li>
+                <li class="horario__fila" data-dias="0" data-abre="10:30" data-cierra="15:00">
+                  <span class="horario__dia">Domingos</span>
+                  <span class="horario__hora">10:30 AM – 3:00 PM</span>
+                  <span class="horario__barra" aria-hidden="true"><i style="--ini:12.5%;--ancho:37.5%"></i><b class="horario__ahora"></b></span>
+                </li>
+              </ul>
+              <div class="horario__eje" aria-hidden="true"><span>9 AM</span><span>12 PM</span><span>3 PM</span><span>6 PM</span><span>9 PM</span></div>
+            </div>
+
+            <div class="letrero-caja" data-reveal style="--d:.1s">
+              <figure class="letrero" data-tilt>
+                <img src="assets/img/letrero-taller.jpg" width="1200" height="1600" alt="Letrero del Taller de Bicicletas Tony: reparación y venta de refacciones, niveladas, engrasadas en general, talachas, pintadas al horno y horarios de atención" loading="lazy" decoding="async">
+                <figcaption>Así nos reconoces</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="hor__col">
+            <div class="mapa" data-reveal>
+              <iframe title="Mapa de la ubicación del Taller de Bicicletas Tony en Villas de San Martín" src="https://maps.google.com/maps?q=19.267058,-98.835130&amp;z=16&amp;hl=es&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+              <div class="mapa__pie">
+                <p class="mapa__dir"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><span>Villas de San Martín, Estado de México</span></p>
+                <p class="mapa__coord">19.267058, -98.835130 · 7587+RWH</p>
+              </div>
+            </div>
+            <a class="btn btn--amarillo btn--grande btn--bloque" href="https://www.google.com/maps/search/?api=1&amp;query=19.267058,-98.835130" target="_blank" rel="noopener">
+              <svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>
+              <span>Voy para allá: cómo llegar</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PREGUNTAS ================= -->
+    <section class="faq" id="preguntas" aria-labelledby="titulo-faq">
+      <div class="contenedor faq__grid">
+        <header class="seccion-cab seccion-cab--clara">
+          <p class="etiqueta etiqueta--oscura" data-reveal><span class="etiqueta__n">05</span> Dudas comunes</p>
+          <h2 class="titulo-seccion titulo-seccion--oscuro" id="titulo-faq" data-reveal>Antes de venir, <span class="t-rojo">resolvemos tus dudas.</span></h2>
+          <a class="btn btn--tinta" href="#contacto" data-wa="Hola, tengo una duda sobre el taller y sus servicios." data-reveal>
+            <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>
+            <span>Pregúntanos lo que quieras</span>
+          </a>
+        </header>
+
+        <div class="faq__lista" data-reveal>
+          <details class="pregunta" name="faq" open>
+            <summary><span>¿Qué servicios hacen?</span><i aria-hidden="true"></i></summary>
+            <div class="pregunta__resp"><p>Hacemos niveladas de rin, engrasadas en general, talachas y pintadas al horno. También vendemos refacciones para bicicleta.</p></div>
+          </details>
+          <details class="pregunta" name="faq">
+            <summary><span>¿En qué horario atienden?</span><i aria-hidden="true"></i></summary>
+            <div class="pregunta__resp"><p>De lunes a viernes de 4:00 PM a 8:30 PM, sábados de 10:30 AM a 8:30 PM y domingos de 10:30 AM a 3:00 PM.</p></div>
+          </details>
+          <details class="pregunta" name="faq">
+            <summary><span>¿Dónde están?</span><i aria-hidden="true"></i></summary>
+            <div class="pregunta__resp"><p>En Villas de San Martín, Estado de México. Abre el mapa de esta página para ver la ubicación exacta o escríbenos por WhatsApp.</p></div>
+          </details>
+          <details class="pregunta" name="faq">
+            <summary><span>¿Cuánto cuesta el servicio?</span><i aria-hidden="true"></i></summary>
+            <div class="pregunta__resp"><p>Depende de tu bici y del trabajo que necesite. Mándanos una foto y una descripción por WhatsApp y te orientamos.</p></div>
+          </details>
+          <details class="pregunta" name="faq">
+            <summary><span>¿Puedo preguntar por una refacción antes de ir?</span><i aria-hidden="true"></i></summary>
+            <div class="pregunta__resp"><p>Claro. Dinos qué pieza buscas (con foto si la tienes) y te confirmamos si la tenemos. Puedes usar el buscador de refacciones de esta página.</p></div>
+          </details>
+          <details class="pregunta" name="faq">
+            <summary><span>¿Pueden pintar mi bici del color que quiero?</span><i aria-hidden="true"></i></summary>
+            <div class="pregunta__resp"><p>Hacemos pintadas al horno. Cuéntanos qué color tienes en mente y te confirmamos las opciones disponibles.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACTO ================= -->
+    <section class="contacto" id="contacto" aria-labelledby="titulo-contacto">
+      <div class="contacto__fondo" aria-hidden="true">
+        <svg class="contacto__plato" viewBox="0 0 100 100"><use href="#i-plato"/></svg>
+      </div>
+      <div class="contenedor contacto__grid">
+        <div class="contacto__info">
+          <p class="etiqueta" data-reveal><span class="etiqueta__n">06</span> Hablemos de tu bici</p>
+          <h2 class="titulo-seccion" id="titulo-contacto" data-reveal>Hoy toca <span class="t-amarillo">rodar.</span></h2>
+          <p class="contacto__texto" data-reveal>Llena el formulario y se abrirá WhatsApp con tu mensaje listo para enviarlo al taller. Sin vueltas.</p>
+
+          <ul class="contacto__datos" data-reveal>
+            <li data-contacto-tel>
+              <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>
+              <div><span>WhatsApp y teléfono</span><a href="tel:+525614897472" data-telefono>+52 56 1489 7472</a></div>
+            </li>
+            <li>
+              <svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>
+              <div><span>Ubicación</span><a href="https://www.google.com/maps/search/?api=1&amp;query=19.267058,-98.835130" target="_blank" rel="noopener">Villas de San Martín, Estado de México</a></div>
+            </li>
+            <li>
+              <svg class="ico" aria-hidden="true"><use href="#i-reloj"/></svg>
+              <div><span>Horarios</span><p>Lun a vie 4:00–8:30 PM · Sáb 10:30 AM–8:30 PM · Dom 10:30 AM–3:00 PM</p></div>
+            </li>
+          </ul>
+        </div>
+
+        <form class="form" id="formContacto" novalidate data-reveal>
+          <div class="form__borde" aria-hidden="true"></div>
+          <div class="form__in">
+            <h3 class="form__titulo">Arma tu mensaje</h3>
+
+            <div class="campo">
+              <label for="f-nombre">¿Cómo te llamas?</label>
+              <input id="f-nombre" name="nombre" type="text" autocomplete="name" placeholder="Tu nombre" required>
+              <span class="campo__error" data-error="nombre"></span>
+            </div>
+
+            <fieldset class="campo campo--chips">
+              <legend>¿Qué necesita tu bici?</legend>
+              <div class="chips">
+                <label class="chip"><input type="radio" name="servicio" value="Nivelada de rin" required><span>Nivelada</span></label>
+                <label class="chip"><input type="radio" name="servicio" value="Engrasada en general"><span>Engrasada</span></label>
+                <label class="chip"><input type="radio" name="servicio" value="Talacha"><span>Talacha</span></label>
+                <label class="chip"><input type="radio" name="servicio" value="Pintada al horno"><span>Pintada al horno</span></label>
+                <label class="chip"><input type="radio" name="servicio" value="Refacciones"><span>Refacciones</span></label>
+                <label class="chip"><input type="radio" name="servicio" value="No sé, que la revisen"><span>No sé, que la revisen</span></label>
+              </div>
+              <span class="campo__error" data-error="servicio"></span>
+            </fieldset>
+
+            <div class="campo-doble">
+              <div class="campo">
+                <label for="f-tipo">Tipo de bici</label>
+                <select id="f-tipo" name="tipo">
+                  <option value="">Elige una opción</option>
+                  <option>Montaña</option>
+                  <option>Cruiser o playera</option>
+                  <option>BMX</option>
+                  <option>Ruta o carrera</option>
+                  <option>Infantil</option>
+                  <option>Otra</option>
+                </select>
+              </div>
+              <div class="campo">
+                <label for="f-cuando">¿Cuándo pasas?</label>
+                <select id="f-cuando" name="cuando">
+                  <option value="">Elige una opción</option>
+                  <option>Hoy</option>
+                  <option>Mañana</option>
+                  <option>Este fin de semana</option>
+                  <option>Aún no sé</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="campo">
+              <label for="f-mensaje">Cuéntanos más (opcional)</label>
+              <textarea id="f-mensaje" name="mensaje" rows="3" placeholder="Ej. el rin delantero está chueco y la cadena rechina"></textarea>
+            </div>
+
+            <button class="btn btn--amarillo btn--grande btn--bloque" type="submit" data-enviar>
+              <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>
+              <span>Estoy listo, mándame a WhatsApp</span>
+            </button>
+            <p class="form__estado" id="formEstado" role="status" aria-live="polite">Se abrirá WhatsApp con tu mensaje listo. Aquí no guardamos tus datos.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= PIE ================= -->
+  <footer class="pie">
+    <div class="pie__marquee" aria-hidden="true">
+      <div class="pie__pista"><span>Que tu bici ruede como debe</span><i></i><span>Que tu bici ruede como debe</span><i></i><span>Que tu bici ruede como debe</span><i></i><span>Que tu bici ruede como debe</span><i></i></div>
+    </div>
+    <div class="contenedor pie__grid">
+      <div class="pie__marca">
+        <a class="marca marca--pie" href="#inicio" aria-label="Taller de Bicicletas Tony, volver al inicio">
+          <svg class="marca__plato" viewBox="0 0 100 100" aria-hidden="true"><use href="#i-plato"/></svg>
+          <span class="marca__texto">
+            <span class="marca__taller">Taller de</span>
+            <span class="marca__bici">Bicicletas</span>
+            <span class="marca__tony">Tony</span>
+          </span>
+        </a>
+        <p>Reparación y venta de refacciones para bicicletas en Villas de San Martín, Estado de México.</p>
+      </div>
+      <nav class="pie__nav" aria-label="Secciones del sitio">
+        <h2 class="pie__titulo">Explora</h2>
+        <ul>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#refacciones">Refacciones</a></li>
+          <li><a href="#ruta">Cómo funciona</a></li>
+          <li><a href="#horarios">Horarios y mapa</a></li>
+          <li><a href="#preguntas">Preguntas frecuentes</a></li>
+        </ul>
+      </nav>
+      <div class="pie__col">
+        <h2 class="pie__titulo">Horarios</h2>
+        <ul class="pie__horas">
+          <li><span>Lun a vie</span> 4:00 PM – 8:30 PM</li>
+          <li><span>Sábados</span> 10:30 AM – 8:30 PM</li>
+          <li><span>Domingos</span> 10:30 AM – 3:00 PM</li>
+        </ul>
+        <a class="btn btn--amarillo btn--chico" href="#contacto" data-wa="Hola, quiero hablar con el taller.">
+          <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>
+          <span>Escríbenos por WhatsApp</span>
+        </a>
+      </div>
+    </div>
+    <p class="pie__legal">© 2026 Taller de Bicicletas Tony · Villas de San Martín, Estado de México</p>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a class="whatsapp-flotante" id="whatsappFlotante" href="#contacto" data-wa="Hola, vi la página del taller y quiero más información." aria-label="Escribir al taller por WhatsApp">
+    <span class="whatsapp-flotante__onda" aria-hidden="true"></span>
+    <svg class="whatsapp-flotante__ico" aria-hidden="true"><use href="#i-wa"/></svg>
+    <span class="whatsapp-flotante__texto">¿Hablamos?</span>
+  </a>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
